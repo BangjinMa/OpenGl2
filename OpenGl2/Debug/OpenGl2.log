@@ -1,29 +1,9 @@
-﻿  stdafx.cpp
-  Triangle.cpp
+﻿  RectangleRender.cpp
 c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\shader.h(64): warning C4101: “infoLog”: 未引用的局部变量
 c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\shader.h(63): warning C4101: “success”: 未引用的局部变量
-c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\triangle.cpp(12): warning C4305: “+=”: 从“double”到“float”截断
-  stb_image.cpp
-  RenderManager.cpp
-c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\shader.h(64): warning C4101: “infoLog”: 未引用的局部变量
-c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\shader.h(63): warning C4101: “success”: 未引用的局部变量
-  Render.cpp
-c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\shader.h(64): warning C4101: “infoLog”: 未引用的局部变量
-c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\shader.h(63): warning C4101: “success”: 未引用的局部变量
-  RectangleRender.cpp
-c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\shader.h(64): warning C4101: “infoLog”: 未引用的局部变量
-c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\shader.h(63): warning C4101: “success”: 未引用的局部变量
-c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\rectanglerender.cpp(31): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\rectanglerender.cpp(32): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-  Light.cpp
-c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\shader.h(64): warning C4101: “infoLog”: 未引用的局部变量
-c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\shader.h(63): warning C4101: “success”: 未引用的局部变量
-  LearnOpGL.cpp
-c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\shader.h(64): warning C4101: “infoLog”: 未引用的局部变量
-c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\shader.h(63): warning C4101: “success”: 未引用的局部变量
-  AppDeBugger.cpp
-c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\shader.h(64): warning C4101: “infoLog”: 未引用的局部变量
-c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\shader.h(63): warning C4101: “success”: 未引用的局部变量
-  正在生成代码...
-  glad.c
+c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\rectanglerender.cpp(19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\rectanglerender.cpp(20): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\rectanglerender.cpp(43): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\rectanglerender.cpp(44): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+c:\users\bangjin\documents\visual studio 2017\projects\opengl2\opengl2\rectanglerender.cpp(45): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
   OpenGl2.vcxproj -> C:\Users\BangJin\Documents\Visual Studio 2017\Projects\OpenGl2\Debug\OpenGl2.exe

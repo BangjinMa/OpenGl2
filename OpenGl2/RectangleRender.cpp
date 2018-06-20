@@ -2,21 +2,9 @@
 #include "Camera.h"
 
 
-RectangleRender::RectangleRender()
-{
-}
-glm::vec3 cubePositions[] = {
-	glm::vec3(0.0f,  0.0f,  0.0f),
-	glm::vec3(2.0f,  5.0f, -15.0f),
-	glm::vec3(-1.5f, -2.2f, -2.5f),
-	glm::vec3(-3.8f, -2.0f, -12.3f),
-	glm::vec3(2.4f, -0.4f, -3.5f),
-	glm::vec3(-1.7f,  3.0f, -7.5f),
-	glm::vec3(1.3f, -2.0f, -2.5f),
-	glm::vec3(1.5f,  2.0f, -2.5f),
-	glm::vec3(1.5f,  0.2f, -1.5f),
-	glm::vec3(-1.3f,  1.0f, -1.5f)
-};
+RectangleRender::RectangleRender(){}
+
+
 glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
 void RectangleRender::render()
 {
@@ -26,7 +14,7 @@ void RectangleRender::render()
 	glm::mat4 model;
 	glm::mat4 view;
 	glm::mat4 projection;
-	model = glm::rotate(model, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
+	model = glm::rotate(model,  glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
 	float radius = 10.0f;
 	float camX = sin(glfwGetTime()) * radius;
 	float camZ = cos(glfwGetTime()) * radius;
@@ -36,15 +24,32 @@ void RectangleRender::render()
 	projection = glm::perspective(glm::radians(45.0f), (float)800 / (float)600, 0.1f, 100.0f);
 	shader->setMat4("model", model);
 	Camera *camera = new Camera();
-	camera->Position =glm::vec3(0,0,10);
+	camera->Position =glm::vec3(0,0,5);
 	shader->setMat4("view", camera->GetViewMatrix());
 	shader->setMat4("projection", projection);
 
 
 	shader->setVec3("objectColor", glm::vec3(1.f, .5f, .5f));
 	shader->setVec3("lightColor", glm::vec3(1, 1, 1));
-
 	shader->setVec3("lightPos", lightPos);
+
+	shader->setVec3("material.ambient", 1.0f, 0.5f, 0.31f);
+	shader->setVec3("material.diffuse", 1.0f, 0.5f, 0.31f);
+	shader->setVec3("material.specular", 0.5f, 0.5f, 0.5f);
+	shader->setFloat("material.shininess", 32.0f);
+	shader->setVec3("viewPos", camera->Position);
+
+	glm::vec3 lightColor;
+	lightColor.x = sin(glfwGetTime() * 2.0f);
+	lightColor.y = sin(glfwGetTime() * 0.7f);
+	lightColor.z = sin(glfwGetTime() * 1.3f);
+
+	glm::vec3 diffuseColor = lightColor * glm::vec3(0.5f); // 降低影响
+	glm::vec3 ambientColor = diffuseColor * glm::vec3(0.2f); // 很低的影响
+
+	shader->setVec3("light.ambient", ambientColor);
+	shader->setVec3("light.diffuse", diffuseColor);
+	shader->setVec3("light.specular", 1.0f, 1.0f, 1.0f);
 
 	glBindVertexArray(arrayID);
 	//glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);

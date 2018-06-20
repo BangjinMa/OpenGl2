@@ -96,11 +96,11 @@ void AppDebugger::Update(GLFWwindow * window)
 {
 	
 	RectangleRender *rectangleRender = new RectangleRender();
-	rectangleRender->CompileShader("./Shader/HelloShader3/HelloShaderObject.vs", "./Shader/HelloShader3/HelloShaderObject.fs");
+	rectangleRender->CompileShader("./Shader/HelloShader4/HelloShaderObject.vs", "./Shader/HelloShader4/HelloShaderObject.fs");
 	rectangleRender->InitVAOAndVBO();
 
 	Light *light = new Light();
-	light->CompileShader("./Shader/HelloShader3/HelloShaderLight.vs", "./Shader/HelloShader3/HelloShaderLight.fs");
+	light->CompileShader("./Shader/HelloShader4/HelloShaderLight.vs", "./Shader/HelloShader4/HelloShaderLight.fs");
 	light->InitVAOAndVBO();
 	glEnable(GL_DEPTH_TEST);
 	while (!glfwWindowShouldClose(window))
